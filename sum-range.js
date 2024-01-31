@@ -1,5 +1,18 @@
 function range(start, end, step = 1) {
-  // Add code.
+
+  let range = 0;
+  
+  if (start > end) {
+    range = start - end;
+  }
+  else {
+    range = end - start;
+  }
+
+  for (i = range; i > 0; i--) {
+    
+  }
+
 }
 
 function sum(numbers) {
