@@ -1,28 +1,29 @@
 function range(start, end, step = 1) {
-
-  let range = 0;
-  
-  if (start > end) {
-    range = start - end;
+  let list = [];
+  let range = end - start;
+  if (range > 0) {
+    for (i = start; i <= end; i += step) {
+      list.push(i);
+    }
   }
-  else {
-    range = end - start;
+  else if (range < 0) {
+    if (step === 1) {
+      step = -1;
+    }
+    for (i = start; i >= end; i += step) {
+      list.push(i);
+    }
   }
-
-  for (i = range; i > 0; i--) {
-    
-  }
-
+  return list;
 }
 
 function sum(numbers) {
-  // Add code.
+  let sum = 0;
+  for (i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
 }
-
-
-
-
-
 
 // tests
 console.log(range(1, 10));
